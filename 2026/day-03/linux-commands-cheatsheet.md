@@ -39,6 +39,17 @@ head file	---------First 10 lines
 tail file	---------Last 10 lines
 tail -f logfile	---------Live log view
 
+🔹 3. Network Management
+•	ip a — Show IP address and other information for all active interfaces
+•	ip addr — Display IP address details of network interfaces (same as ip a)
+•	ip r — Show IP address of default gateway
+•	cat /etc/resolv.conf — See what DNS servers your system is configured to use
+•	ping — Send a ping request to a network device
+•	traceroute — Trace the network path taken to a device
+•	ssh — Login to a remote device with SSH
+•	dig — Query DNS servers for detailed information about hostnames and records
+•	curl — Transfer data from or to a server using supported protocols (HTTP, FTP, etc.)
+
 
 
 

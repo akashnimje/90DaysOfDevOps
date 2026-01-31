@@ -1,4 +1,4 @@
-Day-3
+lDay-3
 LINUX COMMAND CHEAT SHEET
 Command	Use
 

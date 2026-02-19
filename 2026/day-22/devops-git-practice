@@ -1,0 +1,280 @@
+Day 22 is where you officially enter the Git world. Let’s do this step-by-step so you get real files + real commits + real understanding (not just theory).
+
+Below is a complete practical guide + ready-to-copy content for:
+
+✅ Commands
+✅ git-commands.md
+✅ day-22-notes.md
+✅ Commit workflow
+
+✅ Task 1: Install and Configure Git
+1. Verify Git is installed
+git --version
+
+
+Expected output (example):
+
+git version 2.43.0
+
+2. Set your Git identity
+git config --global user.name "Akash Nimje"
+git config --global user.email "akash@example.com"
+
+
+(Use your real email)
+
+3. Verify configuration
+git config --list
+
+
+You should see:
+
+user.name=Akash Nimje
+user.email=akash@example.com
+
+
+
+✅ Task 2: Create Your Git Project
+mkdir devops-git-practice
+cd devops-git-practice
+git init
+
+
+Output:
+
+Initialized empty Git repository in .../devops-git-practice/.git/
+
+Check status
+git status
+
+
+Output:
+
+On branch master
+No commits yet
+nothing to commit (create/copy files and use "git add" to track)
+
+Explore .git directory
+ls -a
+cd .git
+ls
+
+
+You will see:
+
+HEAD  config  description  hooks  objects  refs
+
+
+Then go back:
+
+cd ..
+
+
+
+✅ Task 3: Create git-commands.md
+touch git-commands.md
+nano git-commands.md
+
+
+Paste this content 👇
+
+📄 git-commands.md
+# Git Commands Reference
+
+## Setup & Config
+### git --version
+Shows the installed Git version.
+Example:
+git --version
+
+### git config --global user.name
+Sets the Git username.
+Example:
+git config --global user.name "Akash Nimje"
+
+### git config --global user.email
+Sets the Git email address.
+Example:
+git config --global user.email "akash@example.com"
+
+---
+
+## Basic Workflow
+### git init
+Initializes a new Git repository.
+Example:
+git init
+
+### git status
+Shows the current state of the working directory and staging area.
+Example:
+git status
+
+### git add
+Adds files to the staging area.
+Example:
+git add git-commands.md
+
+### git commit
+Saves staged changes to the repository.
+Example:
+git commit -m "Add initial git commands reference"
+
+---
+
+## Viewing Changes
+### git log
+Shows commit history.
+Example:
+git log
+
+### git diff
+Shows differences between working directory and last commit.
+Example:
+git diff
+
+### git log --oneline
+Shows compact commit history.
+Example:
+git log --oneline
+
+
+Save and exit.
+
+
+
+
+✅ Task 4: Stage and Commit
+git add git-commands.md
+git status
+
+
+You should see:
+
+Changes to be committed:
+  new file: git-commands.md
+
+
+Commit:
+
+git commit -m "Add initial git commands reference"
+
+
+View history:
+
+git log
+
+
+
+
+
+✅ Task 5: Build Commit History (do this 3 times)
+
+Edit file again:
+
+nano git-commands.md
+
+
+Add more commands (append this):
+
+### git show
+Shows details of a specific commit.
+Example:
+git show
+
+### git rm
+Removes file from Git and working directory.
+Example:
+git rm file.txt
+
+
+Save → then:
+
+git diff
+git add git-commands.md
+git commit -m "Add more viewing and file commands"
+
+
+Repeat once more by adding:
+
+### git mv
+Renames a file tracked by Git.
+Example:
+git mv old.txt new.txt
+
+
+Commit:
+
+git add git-commands.md
+git commit -m "Add rename command example"
+
+View compact history
+git log --oneline
+
+
+Example output:
+
+a3f21c3 Add rename command example
+b92d1fa Add more viewing and file commands
+c31ab88 Add initial git commands reference
+
+
+
+
+
+✅ Task 6: Create day-22-notes.md
+touch day-22-notes.md
+nano day-22-notes.md
+
+
+Paste this 👇
+
+📄 day-22-notes.md
+# Day 22 – Git Basics Notes
+
+## 1. Difference between git add and git commit
+git add moves changes from the working directory to the staging area.
+git commit saves those staged changes permanently in the repository with a message.
+
+## 2. What does the staging area do?
+The staging area lets you choose what changes should be included in the next commit.
+Git does not commit directly so that we can review and control what goes into each commit.
+
+## 3. What information does git log show?
+git log shows:
+- Commit ID (hash)
+- Author name and email
+- Date and time of commit
+- Commit message
+
+## 4. What is the .git/ folder?
+The .git folder contains all Git data including:
+- Commit history
+- Branches
+- Configuration
+- Objects
+
+If the .git folder is deleted, the project is no longer a Git repository and all version history is lost.
+
+## 5. Difference between working directory, staging area, and repository
+Working directory: Where we edit files.
+Staging area: Where we prepare files for commit using git add.
+Repository: Where committed history is stored using git commit.
+
+
+Save and commit it:
+
+git add day-22-notes.md
+git commit -m "Add Day 22 Git workflow notes"
+
+
+
+
+✅ Final Expected Output (You now have)
+
+✔ Folder: devops-git-practice
+✔ Git repo initialized
+✔ File: git-commands.md
+✔ File: day-22-notes.md
+✔ Multiple commits
+✔ Clean commit history
